@@ -1,0 +1,227 @@
+<html>
+<head>
+	<title>Alex Ly - Web Developer</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+	
+<body>
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			 <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#alex-nav" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+      	</button>
+      	<a class="navbar-brand" href="#">Alex Ly</a>
+    	</div>
+    	<div id="alex-nav" class="collapse navbar-collapse">
+    		<ul class="nav navbar-nav navbar-right">
+    			<li><a href="#portfolio-sec">Portfolio</a></li>
+    			<li><a href="#contact-sec">Contact</a></li>
+    			<li class="dropdown">
+    				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Social Media <span class="caret"></span></a>
+    				<ul class="dropdown-menu">
+	            <li>
+	            	<a href="https://github.com/alex-B-Ly">GitHub</a>
+	            </li>
+	            <li>
+	            	<a href="#">LinkedIn</a>
+	            </li>
+	            <li>
+	            	<a href="#">Blog</a>
+	            </li>
+	          </ul>
+	        </li>
+    		</ul>
+    	</div>
+		</div>
+	</nav>
+
+	<header>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12 col-md-8 col-md-offset-2 col-lg-4 col-lg-offset-4 text-center">
+					<h1>Alex Ly</h1>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<section class="alex-intro">
+		<div class="container-fluid">
+			<div class="row text-center">
+				<div class="col-xs-12 col-md-6 col-md-offset-3">
+					<img id="alex" class="intro-pic" src="img/alex.jpg" alt="alex's picture">
+					<p class="intro-description">Bacon ipsum dolor amet tongue short ribs shank pancetta ribeye filet mignon. Kielbasa ham hock chuck cupim drumstick prosciutto. Pancetta pork chop pork loin pastrami, alcatra chuck boudin leberkas meatloaf shank pork belly. Sirloin alcatra t-bone doner meatloaf hamburger rump shank cupim cow.
+
+Jowl capicola beef ribs, doner flank brisket hamburger boudin kielbasa bresaola venison frankfurter tenderloin. Filet mignon shoulder picanha, tail rump spare ribs swine cupim prosciutto beef flank short loin venison.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="skills">
+		<div class="container">
+			<div class="col-xs-12">
+				<h2 class="text-center section-title">Skills and Knowledge</h2>
+			</div>
+			<table class="table text-center">
+					<tr>
+						<td>HTML</td>
+						<td>CSS</td>
+						<td>Sass</td>
+					</tr>
+					<tr>
+						<td>JavaScript</td>
+						<td>jQuery</td>
+						<td>AJAX</td>
+					</tr>
+					<tr>
+						<td>JSON</td>
+						<td>Git</td>
+						<td class="tablefix">GitHub</td>
+					</tr>
+					<tr>
+						<td>Bootstrap</td>
+						<td>French</td>
+					</tr>
+				</table>
+		</div>
+	</section>
+
+	<!-- Add a skills modal.  When a skill is clicked, the modal appears and gives description of what I can do and have done -->
+	<div id="main-modal" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <div class="modal-content text-center">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal"><span class="modal-close">&times;</span></button>
+	        <h2 class="modal-main-title"></h2>
+	      </div>
+	      <div class="modal-body">
+	        <h3 class="modal-created-title"></h3>
+	        <p class="modal-created-tech"></p>
+	        <p class="modal-proj-descript"></p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+
+	  </div>
+	</div>
+
+	<!-- fixed backgroud image that appears to move when scroll -->
+	<section class="image-divide"></section>
+
+	<section id="portfolio-sec" class="portfolio">
+		<div class="container">
+			<!-- projects will go here -->
+			<div class="row text-center">
+				<h2 class="section-title">Portfolio</h2>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 portfolio-project text-center">
+					<div class="col-xs-12">
+						<a class="project-title" href="http://www.frenchlearnersguide.com">French Learner's Guide</a>
+					</div>
+					<div class="col-xs-12">
+						<a href="http://www.frenchlearnersguide.com">
+							<img class="project-img" src="img/frenchlearnersguide.jpg" alt="French Learner's Guide picture">
+						</a>
+					</div>
+					<div class="col-xs-12">
+						<a href="#" class="project-info-trigger" data-toggle="modal" data-target="#main-modal">Info</a>
+						<div class="project-description">
+							<h3 class="created-title">Created with:</h3>
+							<p class="created-tech">JavaScript, jQuery, AJAX</p>
+							<p class="description-p">This is the first web site I created.  I made it to assist my mother, who is a high school French teacher, as well as to assist learners of the language gain a better understanding of it.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 portfolio-project text-center">
+					<div class="col-xs-12">
+						<a class="project-title" href="http://www.alexly-webdev.com">Alex Ly - Web Dev</a>
+					</div>
+					<div class="col-xs-12">
+						<a href="http://www.alexly-webdev.com">
+							<img class="project-img" src="" alt="AlexLy-WebDev picture">
+						</a>
+					</div>
+					<div class="col-xs-12">
+						<a href="#" class="project-info-trigger" data-toggle="modal" data-target="#main-modal">Info</a>
+						<div class="project-description">
+							<h3 class="created-title">Created with:</h3>
+							<p class="created-tech">JavaScript, jQuery, AJAX, Bootstrap</p>
+							<p class="description-p">This is the site you are currently on.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="image-divide"></section>
+
+	<section class="github-repos">
+		<div class="container-fluid">
+			<div class="row repo-area text-center">
+				<!-- github repos will appear in here when 'see my repos button is pressed', when a repo is clicked, other repos disappear and repo name becomes title with slide down section showing commits.  A button will be available to return list of repos -->
+				<div class="col-xs-12">
+					<h2 class="section-title">GitHub Repos</h2>
+				</div>
+				<div class="col-xs-12">
+					<a id="repo-fetch" href="#">Click to see my repos</a>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+					<h3 class="repo-title">alex-B-Ly Repos</h3>
+					<p class="repo-instructions">Click on a repo name to see its commits. Click on its name again to return to the repo list.</p>
+					<div class="repo-list"></div>
+					<table class="table text-center repo-info-table">
+						<thead>
+							<tr>
+								<th class="text-center">Message</th>
+								<th class="text-center">Author</th>
+								<th class="text-center">Date</th>
+							</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="contact-sec" class="contact">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12 text-center">
+					<h2 class="section-title">Contact Me</h2>
+				</div>
+				<div class="col-xs-12 text-center contact-items">
+					<p class="contact-item">email: ABL12582@gmail.com</p>
+					<p class="contact-item">Location: Bucks County Area</p>
+				</div>
+				<div class="col-xs-12 text-center map-item">
+					<iframe class="bucks-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d389317.13265426253!2d-75.10387180000001!3d40.330363300000016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c446ceb7670e1f%3A0x9e1be4fefb5ca713!2sBucks+County%2C+PA!5e0!3m2!1sen!2sus!4v1433167669000"></iframe>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer></footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript" <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/functionality.js"></script>
+</body>
+</html>

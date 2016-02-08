@@ -1,0 +1,1 @@
+This folder contains individual objects and parts of the document that will be individually styled, such as buttons, sections, etc.

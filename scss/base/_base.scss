@@ -1,0 +1,28 @@
+/* BASE */
+body{
+	background: $dark-back;
+	color: #fff;
+	// This pattern is downloaded from www.subtlepatterns.com 
+ // If you need more, that's where to get'em.
+}
+
+a,
+a:link,
+a:hover,
+a:visited,
+a:active{
+	text-decoration: none;
+}
+
+h1{
+	font-size: 5em;
+	background: $dark-back;
+	padding: 20px 0;
+	opacity: 0.6;
+	border-radius: 20px;
+}
+
+h2.section-title{
+	font-size: 2.2em;
+	margin: 50px 0 35px 0;
+}

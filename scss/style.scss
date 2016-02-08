@@ -1,0 +1,17 @@
+/*
+	Alex Ly - Web Developer
+	Main scss file
+*/
+
+/* BASE files */
+@import 'base/_variables.scss';
+@import 'base/_mixins.scss';
+@import 'base/_base.scss';
+
+/* MODULES files */
+@import 'modules/_sections.scss';
+
+/* LAYOUT files */
+@import 'layout/_nav.scss';
+@import 'layout/_header.scss';
+@import 'layout/_footer.scss';
