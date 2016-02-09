@@ -1,4 +1,5 @@
 var express = require('express');
+var session = require('express-session');
 var app = express();
 var PORT = process.env.PORT || 8080;
 
@@ -7,6 +8,14 @@ app.use('/css', express.static('public/css'));
 app.use('/js', express.static('public/js'));
 app.use('/img', express.static('public/img'));
 app.use('/rps', express.static('public/rpsls'));
+
+// MIDDLEWARE - Session
+app.use(session({
+  secret: 'secret stuff',
+  cookie: { maxAge: 600000 },
+  saveUninitialized: true,
+  resave: false
+}));
 
 // GET ROUTE DIRECTOR FUNCTION
 function getDirect(url, filepath){
