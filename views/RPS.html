@@ -1,0 +1,179 @@
+<!doctype HTML>
+<html>
+<head>
+	<title>Rock Paper Scissors</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/rps/css/style.css">
+</head>
+<body>
+
+	<div class="game-start-area">
+		<div class="container">
+			<div class="row text-center">
+				<h1>ROCK PAPER SCISSORS LIZARD SPOCK</h1>
+			</div>
+			<div class="row round-choose-info-area">
+				<div class="col-xs-6 text-center">
+					<i id="start-screen-icons" class="fa fa-hand-rock-o"></i>
+				</div>
+				<div class="col-xs-6">
+					<div class="rounds-display text-center">
+						<p class="rounds-display-number">0</p>
+						<p class="rounds-display-title">Number of Rounds</p>
+					</div>
+				</div>
+			</div>
+			<div class="row round-choose-area text-center">
+				<div class="col-xs-12">
+					<p class="round-choose-title">Choose a number of rounds</p>
+				</div>
+				<div class="col-xs-12 round-buttons-col">
+					<button class="round-button" data-rounds="1">1</button>
+					<button class="round-button" data-rounds="3">3</button>
+					<button class="round-button" data-rounds="5">5</button>
+					<button class="round-button" data-rounds="10">10</button>
+					<button class="round-button" data-rounds="15">15</button>
+				</div>
+				<div class="col-xs-12 round-buttons-col">
+					<button class="round-button" data-rounds="20">20</button>
+					<button class="round-button" data-rounds="25">25</button>
+					<button class="round-button" data-rounds="40">40</button>
+					<button class="round-button" data-rounds="50">50</button>
+					<button class="round-button" data-rounds="100">100</button>
+				</div>
+				<div class="col-xs-12">
+					<button class="btn start-button">Start the Game</button>
+				</div>
+			</div>
+			<div class="row text-center">
+				<div class="col-xs-12">
+					<a class="game-rules" href="#" data-toggle="modal" data-target="#rules-modal">Game Rules</a>
+				</div>
+			</div>
+			<div id="rules-modal" class="modal fade" role="dialog">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header text-center">
+							<h2>Game Rules</h2>
+						</div>
+						<div class="modal-body rules">							
+							<p>This game pits you against an opponent in a game of chance.  You will select the number of rounds you wish to play, and the game will begin when you click start. You will be given the option to pick between rock, paper, scissors, lizard and spock.  Upon choosing, your devious opponent will do the same.  Each of the choices wins over two of the others, and loses to two of the others.  If both you and your opponent have the same choice, a draw is declared and the round starts over.  Below are the winning and losing conditions:</p>
+							<ul class="text-left">
+								<li>Rock breaks scissors and crushes lizard to a pulp.  Rock get wrapped by paper and is vaporized by Spock.</li>
+								<li>Paper wraps rock and paper cuts Spock's logic.  Paper gets sheared by scissors and devoured by lizard.</li>
+								<li>Scissors shears paper and pokes out lizard's eyes.  Scissors gets broken by rock and spock's logic.</li>
+								<li>Lizard consumes Spock and paper.  Lizard gets its eyes poked out by scissors and gets crushed by rock.</li>
+								<li>Spock defeats rock and scissors with his logic.  Spock gets paper cut and eaten by lizard.</li>
+							</ul>
+						</div>
+						<div class="modal-footer">
+							<div class="col-xs-4 col-xs-offset-4">
+								<button class="btn btn-danger btn-block" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="game-area">
+		<div class="container-fluid">
+			<div class="row text-center">
+				<p class="main-title">ROCK PAPER SCISSORS LIZARD SPOCK</p>
+			</div>
+
+			<div class="row text-center score-area">
+				<div class="col-xs-6">
+					<p class="game-area-score">USER: <span id="user-score">0</span></p>
+				</div>
+				<div class="col-xs-6">
+					<p class="game-area-score">COMP: <span id="comp-score">0</span></p>
+				</div>
+			</div>
+
+			<div class="row choice-row">
+				<div class="text-center choice-area">
+					<div class="col-xs-12 col-lg-2 col-lg-offset-1">
+						<i class="fa fa-hand-rock-o choice-button" data-choice="r"></i>
+					</div>
+					<div class="col-xs-12 col-lg-2">
+						<i class="fa fa-hand-paper-o choice-button" data-choice="p"></i>
+					</div>
+					<div class="col-xs-12 col-lg-2">
+						<i class="fa fa-scissors choice-button" data-choice="s"></i>
+					</div>
+					<div class="col-xs-12 col-lg-2">
+						<i class="fa fa-hand-lizard-o choice-button" data-choice="lz"></i>
+					</div>
+					<div class="col-xs-12 col-lg-2">
+						<i class="fa fa-hand-spock-o choice-button" data-choice="sp"></i>
+					</div>
+				</div>
+			</div>
+			<div class="row final-button-area">
+				<div class="col-xs-12 col-md-6 col-md-offset-3">
+					<button class="btn btn-primary btn-block final-button">Final Score</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div id="results-modal" class="modal fade" role="dialog">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-body text-center">
+						<p class="player-choice-modal">You choose</p>
+						<i id="human-choice-img"></i>
+						<p class="round-result"></p>
+						<i id="comp-choice-img"></i>
+						<p class="player-choice-modal">Computer chooses</p>
+					</div>
+					<div class="modal-footer text-center">
+						<button class="results-close btn-block" data-dismiss="modal">Next Round</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="game-finish-area">
+		<div class="container-fluid">
+			<div class="row text-center">
+					<p class="main-title">ROCK PAPER SCISSORS LIZARD SPOCK</p>
+			</div>
+
+			<div class="row text-center winner-row">
+				<h2 class="overall-winner"></h2>
+			</div>
+
+			<div class="row text-center">				
+				<div class="col-xs-6">
+					<p class="final-user-score"></p>
+					<p class="final-user-title">User Score</p>
+				</div>
+
+				<div class="col-xs-6">
+					<p class="final-comp-score"></p>
+					<p class="final-comp-title">Computer Score</p>
+				</div>
+			</div>
+
+			<div class="row text-center">
+				<button class="replay">Replay</button>
+			</div>
+
+		</div>	
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/rps/js/functionality.js"></script>
+</body>
+</html>

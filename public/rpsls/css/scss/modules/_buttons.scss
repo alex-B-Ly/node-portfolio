@@ -1,0 +1,110 @@
+// BUTTONS
+.round-button,
+.start-button{
+	outline: none;
+	box-shadow: none;
+}
+
+.round-button{
+	@include solid-border('all', 3px, #151515);
+	background: #040AFE;
+	color: #F3FC00;
+	font-size: 1.7em;
+	border-radius: 50%;
+	width: auto;
+	height: 60px;
+	width: 60px;
+	transition: all 1.3s, font-weight 0.5s;
+}
+
+.round-button:hover{
+	@include solid-border('all', 3px, #F3FC00);
+	font-weight: bold;
+	background: darken(#040AFE, 20%);
+}
+
+.start-button,
+.start-button:active{
+	@include solid-border('all', 5px, #151515);
+	background: #040AFE;
+	color: #F3FC00;
+	border-radius: 30px;
+	font-size: 2.75em;
+	margin: 20px 0;
+}
+
+.start-button:hover{
+	color: #fff;
+	text-shadow: 0 0 50px #fff;
+}
+
+.start-button-animate{
+	animation: startblink 2s infinite;
+}
+
+.choice-button{
+	color: $choice-buttons;
+	font-size: 10em;
+	cursor: pointer;
+	padding: 30px;
+}
+
+.choice-button:hover{
+	animation: choiceblink 1s infinite;
+}
+
+.results-close{
+	font-size: 1.8em;
+	padding: 15px 0;
+	color: #fff;
+	background: $game-start-back;
+}
+
+.results-close:hover{
+	background: darken($game-start-back,12%);
+	text-shadow: 0 0 12px #fff;	
+}
+
+.final-button{
+	font-size: 3em;
+	padding: 20px 0;
+}
+
+.replay{
+	@include solid-border('all', 4px, #000F9E);
+	animation: reset 1s infinite;
+	border-radius: 40px;
+	font-size: 3em;
+	padding: 20px;
+	background: #ccc;
+	color: #A50404;
+	margin-top: 7%;
+	transition: background 1.3s;
+}
+
+.replay:hover{
+	background: #000;
+}
+
+// MEDIA QUERIES
+@media screen and (min-width:480px) and (max-width:1199px){
+	.choice-button{
+		font-size: 5em;
+		margin-bottom: 10px;
+		min-width: 160px;
+		padding: 25px;
+		border: 0;
+	}
+}
+
+@media screen and (max-width: 479px){
+	.choice-button{
+		font-size: 4em;
+		border: 0;
+		padding: 20px;
+	}
+
+	.choice-button:hover{
+		box-shadow: none;
+	}
+}
