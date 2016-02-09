@@ -1,0 +1,199 @@
+// SECTIONS
+
+/* GAME START AREA */
+.game-start-area,
+.game-area,
+.game-finish-area{
+	height: 100%;
+	width: 100%;
+	color: $choice-buttons;
+}
+
+.game-start-area{
+	background: $game-start-back;
+}
+
+#start-screen-icons{
+	font-size: 7em;
+	padding-top: 40px;
+}
+
+.round-choose-info-area{
+	padding: 10px 0;
+}
+
+.rounds-display{
+	@include solid-border('all', 5px, black);
+	border-radius: 20px;
+}
+
+.rounds-display-number{
+	font-size: 5em;
+	visibility: hidden;
+}
+
+.rounds-display-title{
+	font-size: 1.5em;
+}
+
+.round-choose-title{
+	font-size: 1.7em;
+}
+
+.round-choose-title-warn{
+	animation: round-warn 1s infinite;
+}
+
+.round-buttons-col{
+	padding: 10px 0;
+}
+
+.game-rules,
+.game-rules:link,
+.game-rules:active{
+	font-size: 1.25em;
+	color: $choice-buttons;
+	text-decoration: none;
+	padding-right: 7px;
+	transition: all 2s;
+}
+
+.game-rules:hover{
+	color: lighten($choice-buttons, 10%);
+}
+
+.modal-content{
+	background: $game-back;
+}
+
+.rules{
+	font-size: 1.2em;
+}
+
+/* GAME AREA */
+.game-area{
+	background: $game-back;
+	display: none;
+}
+
+.score-area{
+	padding: 20px 0 0 0;
+}
+
+.game-area-score{
+	font-size: 1.3em;
+}
+
+.choice-area{
+	padding-bottom: 30px;
+}
+
+#user-score,
+#comp-score{
+	font-size: 2.5em;
+}
+
+.final-button-area{
+	margin-top: 30px;
+	display: none;
+}
+
+@media screen and (min-width: 1200px){
+	.main-title{
+		font-size: 3.5em;
+	}
+}
+
+/* RESULTS MODAL */
+.player-choice-modal{
+	font-size: 2em;
+	color: $choice-buttons;
+}
+
+.player-choice-modal:last-of-type{
+	margin-top: 20px;
+}
+
+#human-choice-img,
+#comp-choice-img{
+	font-size: 5em;
+	color: $choice-buttons;
+	display: block;
+}
+
+#human-choice-img{
+	margin-bottom: 50px;
+}
+
+#comp-choice-img{
+	margin-top: 50px;
+}
+
+.round-result{
+	font-size: 3em;
+	color: $choice-buttons;
+	padding: 30px 0;
+}
+
+.round-result-animate{
+	animation: roundresult 0.7s 1;
+}
+
+.round-win,
+.round-tie,
+.round-lose{
+	font-weight: bold;
+}
+
+.round-win{
+	animation: roundwin 2.5s infinite;
+}
+
+.round-tie{
+	animation: roundtie 2.5s infinite;
+}
+
+.round-lose{
+	animation: roundlose 2.5s infinite;
+}
+
+/* GAME FINISH AREA */
+.game-finish-area{
+	background: $game-finish-back;
+	display: none;
+}
+
+.winner-row{
+	padding: 40px 0;
+}
+
+.overall-winner{
+	font-size: 3.5em;
+	color: #fff;
+}
+
+.final-user-title,
+.final-comp-title{
+	font-size: 2em;
+}
+
+.final-user-score,
+.final-comp-score{
+	font-size: 3.4em;
+	margin-top: 5%;
+}
+
+// MEDIA QUERIES
+@media screen and (min-width: 1200px){
+	.choice-row{
+		padding-top: 9%;
+	}
+
+	.score-area{
+		padding: 50px 0;
+	}
+
+	.game-area-score{
+		font-size: 3.25em;
+	}
+}
